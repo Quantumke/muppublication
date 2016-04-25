@@ -563,31 +563,33 @@ document.write(month + "/" + day + "/" + year)
             <!-- End games category design -->            
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="col-lg-4 col-md-4 col-sm-4">
           <aside class="right_content">
             <div class="single_sidebar">
-              <h2><span>Kulikoni</span></h2>
+              <h2><span> Kulikoni</span></h2>
               <ul class="spost_nav">
-                <li>
-                    {% if Kulikoni%}
+
+
+  {% if Kulikoni%}
 {% for k in Kulikoni%}
 
 
+                <li>
 
                   <div class="media wow fadeInDown">
-                    <a href="{{ k.slug }}" class="media-left">
+                    <a href="/{{ k.slug }}" class="media-left">
                       <img alt="img" src="img/{{ k.image }}">
                     </a>
                     <div class="media-body">
-                      <a href="{{ k.slug }}" class="catg_title"> {{ k.title }} </a>
+                      <a href="single_page.html" class="catg_title"> {{ k.title }}</a>
                     </div>
                   </div>
+                    </li>
 
-{%endfor%}
+                    {%endfor%}
 {%else%}
 <p> No Post </p>
 {%endif%}
-                </li>
               </ul>
             </div>
             <!-- start tab section -->
@@ -596,7 +598,7 @@ document.write(month + "/" + day + "/" + year)
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Category</a></li>
                 <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">Video</a></li>
-                <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Comments</a></li>               
+                <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Comments</a></li>
               </ul>
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="category">
@@ -611,7 +613,7 @@ document.write(month + "/" + day + "/" + year)
                   </ul>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="video">
-                  <div class="vide_area">                   
+                  <div class="vide_area">
                     <iframe width="100%" height="250" src="http://www.youtube.com/embed/h5QWbURNEpA?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
                   </div>
                 </div>
@@ -623,7 +625,7 @@ document.write(month + "/" + day + "/" + year)
                       <img alt="img" src="img/post_img1.jpg">
                     </a>
                     <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
+                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>
                     </div>
                   </div>
                 </li>
@@ -633,7 +635,7 @@ document.write(month + "/" + day + "/" + year)
                       <img alt="img" src="img/post_img2.jpg">
                     </a>
                     <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
+                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>
                     </div>
                   </div>
                 </li>
@@ -643,7 +645,7 @@ document.write(month + "/" + day + "/" + year)
                       <img alt="img" src="img/post_img1.jpg">
                     </a>
                     <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                        
+                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>
                     </div>
                   </div>
                 </li>
@@ -653,13 +655,13 @@ document.write(month + "/" + day + "/" + year)
                       <img alt="img" src="img/post_img2.jpg">
                     </a>
                     <div class="media-body">
-                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                       
+                      <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>
                     </div>
                   </div>
                 </li>
               </ul>
                 </div>
-              </div>            
+              </div>
             </div>
             <!-- End tab section -->
             <!-- sponsor add -->
@@ -693,8 +695,8 @@ document.write(month + "/" + day + "/" + year)
             <!-- End sponsor add -->
           </aside>
         </div>
-      </div>  
-    </section>
+      </div>
+       </section>
     <!-- ==================End content body section=============== -->    
     <footer id="footer">       
       <div class="footer_top">
