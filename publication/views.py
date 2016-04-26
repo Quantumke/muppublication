@@ -223,6 +223,9 @@ def viewpost(request):
 		'featured_news':news_posts.objects.filter(id=3),
 		'news':news_posts.objects.all(),
 		'Kulikoni':news_posts.objects.all().order_by('-posted_on')[:5],
+		'politics':news_posts.objects.all()[:5],
+		'featured_girls':news_posts.objects.all().order_by('-id')[:1],
+		'girls':news_posts.objects.all()[:5],
 
 	})
 

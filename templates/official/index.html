@@ -314,80 +314,59 @@ document.write(month + "/" + day + "/" + year)
             <div class="fashion_technology_area">
               <div class="fashion">
                 <div class="single_post_content">
-                  <h2><span>Fashion</span></h2>              
-                  <ul class="business_catgnav wow fadeInDown">
-                    <li>
-                      <figure class="bsbig_fig">
-                        <a href="single_page.html" class="featured_img">
-                            <img alt="img" src="img/featured_img2.jpg">
-                            <span class="overlay"></span>
-                        </a>
-                        <figcaption>
-                          <a href="single_page.html">Proin rhoncus consequat nisl eu ornare mauris</a>
-                        </figcaption>
-                          <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a phare...</p>
-                      </figure>
-                    </li>
-                  </ul>
-                  <ul class="spost_nav">
+                  <h2><span>Politics</span></h2>
+                   <ul class="spost_nav">
+
                   <li>
+                        {% if politics%}
+{% for p in politics%}
+
                     <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="img/post_img1.jpg">
+                      <a href="/{{ p.slug }}" class="media-left">
+                        <img alt="img" src="img/{{ p.image }}">
                       </a>
                       <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
+                        <a href="single_page.html" class="catg_title"> {{ p.title }}</a>
                       </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="img/post_img2.jpg">
-                      </a>
-                      <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="img/post_img1.jpg">
-                      </a>
-                      <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                        
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown">
-                      <a href="single_page.html" class="media-left">
-                        <img alt="img" src="img/post_img2.jpg">
-                      </a>
-                      <div class="media-body">
-                        <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                        
-                      </div>
-                    </div>
+
+{%endfor%}
+{%else%}
+<p> No Post </p>
+{%endif%}
+
                   </li>
                 </ul>
                 </div>
               </div>
               <div class="technology">
                 <div class="single_post_content">
-                  <h2><span>Technology</span></h2>              
+                  <h2><span>girls</span></h2>
                   <ul class="business_catgnav">
+
                     <li>
+                         {% if featured_girls%}
+{% for fg in featured_girls%}
+
                       <figure class="bsbig_fig wow fadeInDown">
-                        <a href="single_page.html" class="featured_img">
-                            <img alt="img" src="img/featured_img3.jpg">
+                        <a href="{{ fg.slug }}" class="featured_img">
+                            <img alt="img" src="img/{{ fg.image }}">
                             <span class="overlay"></span>
                         </a>
                         <figcaption>
-                          <a href="single_page.html">Proin rhoncus consequat nisl eu ornare mauris</a>
+                          <a href="{{ fg.slug }}">{{ fg.title }}</a>
                         </figcaption>
-                          <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a phare...</p>
+                          <p>{{ fg.body }}</p>
                       </figure>
+
+
+
+
+{%endfor%}
+{%else%}
+<p> No Post </p>
+{%endif%}
+
                     </li>
                   </ul>
                   <ul class="spost_nav">
