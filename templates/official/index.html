@@ -315,6 +315,30 @@ document.write(month + "/" + day + "/" + year)
               <div class="fashion">
                 <div class="single_post_content">
                   <h2><span>Politics</span></h2>
+                 <ul class="business_catgnav wow fadeInDown">
+                    <li>
+
+                        {% if feature_politics%}
+{% for fp in feature_politics%}
+
+                      <figure class="bsbig_fig">
+                        <a href="/{{ fp.slug }}" class="featured_img">
+                            <img alt="img" src="img/{{ fp.image }}">
+                            <span class="overlay"></span>
+                        </a>
+                        <figcaption>
+                          <a href="{{ fp.slug }}">{{ fp.title }}</a>
+                        </figcaption>
+                          <p>{{ fp.body }}</p>
+                      </figure>
+
+{%endfor%}
+{%else%}
+<p> No Post </p>
+{%endif%}
+
+                    </li>
+                  </ul>
                    <ul class="spost_nav">
 
                   <li>
@@ -370,46 +394,29 @@ document.write(month + "/" + day + "/" + year)
                     </li>
                   </ul>
                   <ul class="spost_nav">
-                    <li>
+                                      <li>
+
+                        {% if girls%}
+{% for g in girls%}
+
+
+
+
                       <div class="media wow fadeInDown">
-                        <a href="single_page.html" class="media-left">
-                          <img alt="img" src="img/post_img1.jpg">
+                        <a href="/{{ g.slug }}" class="media-left">
+                          <img alt="img" src="img/{{ g.image }}">
                         </a>
                         <div class="media-body">
-                          <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a>                        
+                          <a href="/{{ g.slug }}" class="catg_title">{{ g.title }}</a>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="media wow fadeInDown">
-                        <a href="single_page.html" class="media-left">
-                          <img alt="img" src="img/post_img2.jpg">
-                        </a>
-                        <div class="media-body">
-                          <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a>                        
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media wow fadeInDown">
-                        <a href="single_page.html" class="media-left">
-                          <img alt="img" src="img/post_img1.jpg">
-                        </a>
-                        <div class="media-body">
-                          <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a>                      
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media wow fadeInDown">
-                        <a href="single_page.html" class="media-left">
-                          <img alt="img" src="img/post_img2.jpg">
-                        </a>
-                        <div class="media-body">
-                          <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a>                       
-                        </div>
-                      </div>
-                    </li>
+
+
+                      {%endfor%}
+{%else%}
+<p> No Post </p>
+{%endif%}
+                  </li>s
                   </ul>
                 </div>
               </div>

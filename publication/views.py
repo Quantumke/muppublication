@@ -223,6 +223,7 @@ def viewpost(request):
 		'featured_news':news_posts.objects.filter(id=3),
 		'news':news_posts.objects.all(),
 		'Kulikoni':news_posts.objects.all().order_by('-posted_on')[:5],
+		'feature_politics':news_posts.objects.all().order_by('-id')[:1],
 		'politics':news_posts.objects.all()[:5],
 		'featured_girls':news_posts.objects.all().order_by('-id')[:1],
 		'girls':news_posts.objects.all()[:5],
@@ -230,6 +231,8 @@ def viewpost(request):
 	})
 
 def viewmore(request, slug):
+	data={}
+	
 	return render_to_response('official/single.html', {
 		'posts':get_object_or_404(news_posts, slug=slug)
 		})
