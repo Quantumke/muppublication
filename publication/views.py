@@ -218,7 +218,8 @@ def reset_password(request):
 def viewpost(request):
 	return render_to_response('official/index.html',{
 		'posts': news_posts.objects.all().order_by('-posted_on')[:20],
-		'slider':news_posts.objects.all().order_by('-posted_on')[:5]
+		'slider':news_posts.objects.all().order_by('-posted_on')[:5],
+		'campus':news_posts.objects.all(),
 
 	})
 
