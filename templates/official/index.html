@@ -155,16 +155,18 @@ document.write(month + "/" + day + "/" + year)
            <!-- start news sticker -->
           <div class="latest_newsarea">      
             <span>Latest News</span>
+
+
+
+
+          {% if posts%}
             <ul id="ticker01" class="news_sticker">
-              <li><a href="#"><img src="img/news_thumbnail3.jpg" alt="">My First News Item</a></li> 
-              <li><a href="#"><img src="img/news_thumbnail3.jpg" alt="">My Second News Item</a></li>
-              <li><a href="#"><img src="img/news_thumbnail3.jpg" alt="">My Third News Item</a></li>
-              <li><a href="#"><img src="img/news_thumbnail3.jpg" alt="">My Four News Item</a></li> 
-              <li><a href="#"><img src="img/news_thumbnail3.jpg" alt="">My Five News Item</a></li>
-              <li><a href="#"><img src="img/news_thumbnail3.jpg" alt="">My Six News Item</a></li>
-              <li><a href="#"><img src="img/news_thumbnail3.jpg" alt="">My Seven News Item</a></li> 
-              <li><a href="#"><img src="img/news_thumbnail3.jpg" alt="">My Eight News Item</a></li>
-              <li><a href="#"><img src="img/news_thumbnail2.jpg" alt="">My Nine News Item</a></li>          
+{% for t in posts%}
+              <li><a href="#"><img src="img/{{ t.image }}" alt="">{{ t.title }}</a></li>
+{%endfor%}
+{%else%}
+<p> No Post </p>
+{%endif%}
             </ul>
             <div class="social_area">
               <ul class="social_nav">
@@ -189,34 +191,23 @@ document.write(month + "/" + day + "/" + year)
         <div class="col-lg-8 col-md-8 col-sm-8">
             <!-- Set up your HTML -->
           <div class="slick_slider">
+
+              {% if slider%}
+          {% for p in slider%}
+
             <div class="single_iteam">
-              <a href="single_page.html"> <img src="img/slider_img4.jpg" alt="img"></a>
+              <a href="/{{ p.slug }}"> <img src="img/{{ p.img }}" alt="img"></a>
               <div class="slider_article">
-                <h2><a class="slider_tittle" href="single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
+                <h2><a class="slider_tittle" href="/{{ p.slug }}/">{{ p.title }}</a></h2>
+                <p>{{ p.body }} </p>
               </div>
             </div>
-            <div class="single_iteam">
-              <a href="single_page.html"> <img src="img/slider_img2.jpg" alt="img"></a>
-              <div class="slider_article">
-                <h2><a class="slider_tittle" href="single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
-              </div>
-            </div>
-            <div class="single_iteam">
-              <a href="single_page.html"> <img src="img/slider_img3.jpg" alt="img"></a>
-              <div class="slider_article">
-                <h2><a class="slider_tittle" href="single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
-              </div>
-            </div>
-            <div class="single_iteam">
-              <a href="single_page.html"> <img src="img/slider_img1.jpg" alt="img"></a>
-              <div class="slider_article">
-                <h2><a class="slider_tittle" href="single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
-              </div>
-            </div>
+
+{%endfor%}
+{%else%}
+<p> No Post </p>
+{%endif%}
+
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
