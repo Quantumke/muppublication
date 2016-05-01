@@ -87,10 +87,10 @@
 
 							<tr>
 								<td><input type="checkbox" class="checkbox" /></td>
-								<td><h3><a href="#">{{ ads.title|upper }}</a></h3></td>
+								<td><h3><a href="/{{ ads.slug|upper }}.html">{{ ads.title|upper }}</a></h3></td>
 								<td>{{ ads.posted_on|upper }}</td>
 								<td><a href="#">{{ ads.posted_by|upper }}</a></td>
-								<td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
+								<td><a href="/{{ ads.slug|upper }}.html" class="ico del">Delete</a><a href="/{{ ads.slug|upper }}.html" class="ico edit">Edit</a></td>
 							</tr>
 							{% endfor %}
 						</table>
