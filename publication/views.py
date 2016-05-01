@@ -220,6 +220,8 @@ def viewpost(request):
 		'posts': news_posts.objects.all().order_by('-posted_on')[:20],
 		'slider':news_posts.objects.all().order_by('-posted_on')[:5],
 		'campus':news_posts.objects.all(),
+		'featured_news':news_posts.objects.filter(id=3),
+		'news':news_posts.objects.all()
 
 	})
 
