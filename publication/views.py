@@ -228,6 +228,9 @@ def viewpost(request):
 		'politics':news_posts.objects.all()[:5],
 		'featured_girls':news_posts.objects.all().order_by('-id')[:1],
 		'girls':news_posts.objects.all()[:5],
+		'featured_popular':news_posts.objects.all().order_by('count', '-posted_on')[:1],
+		'popular':news_posts.objects.all().order_by('count')[:5],
+		'gallery':news_posts.objects.all()[:10],
 
 	})
 
