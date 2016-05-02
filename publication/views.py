@@ -25,6 +25,7 @@ from .posting import get_form_data
 from .posting import generate_extra_details
 from .posting import save_post
 from .posting import save_post_transaction
+from .posting import get_count
 from .subscriptions import get_emails
 from .subscriptions import  save_sub
 from .subscriptions import save_sub_event
@@ -232,7 +233,7 @@ def viewpost(request):
 
 def viewmore(request, slug):
 	data={}
-	
+	get_count.GetCount.run(data, slug)
 	return render_to_response('official/single.html', {
 		'posts':get_object_or_404(news_posts, slug=slug)
 		})

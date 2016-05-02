@@ -37,6 +37,7 @@ class news_posts(models.Model):
 	image = models.FileField(upload_to="documents/%Y/%m/%d")
 	slug= models.SlugField(max_length=200, unique=True)
 	active = models.CharField(max_length=100, default='active', blank=False)
+	count=models.CharField(max_length=100, unique=False)
 	posted_by=models.CharField(max_length=200, unique=False)
 	posted_on=models.DateField(default=datetime.now, blank=False)
 
