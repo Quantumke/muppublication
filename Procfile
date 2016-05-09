@@ -1,0 +1,1 @@
+web: gunicorn moiuniversitypublication.wsgi --log-file -
