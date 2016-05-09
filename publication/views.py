@@ -236,7 +236,7 @@ def viewpost(request):
 
 def viewmore(request, slug):
 	data={}
-	get_count.GetCount.run(data, slug)
+	#get_count.GetCount.run(data, slug)
 	return render_to_response('official/single.html', {
 		'posts':get_object_or_404(news_posts, slug=slug)
 		})
