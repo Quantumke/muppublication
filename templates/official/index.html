@@ -24,6 +24,7 @@
     <script type="text/javascript">
       var demo_base_url = '';
     </script>
+<<<<<<< HEAD
 
     <div id="particles"></div>
 
@@ -1383,6 +1384,45 @@
                 <h2><a href="goliath-post-1.html">Lorem ipsum dolor sitat con sectetur lorem</a></h2>
                 <p><i class="tag-default">Technology</i><span class="legend-default"><i class="fa fa-clock-o"></i>March 18, 2015<i class="fa fa-comments"></i>22</span></p>
               </div>
+=======
+	
+    
+  <!-- Preloader -->
+<!--
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+-->
+<!--    <div class="se-pre-con"></div>-->
+  <!-- End Preloader -->
+   
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+  
+  <div class="container">
+    <!-- start header section -->
+    <header id="header">    
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="header_top">
+            <div class="header_top_left">
+              <ul class="top_nav">
+                <li><a href="//">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="header_top_right">
+              <p class="my-font animated infinite bounce">  
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+document.write(month + "/" + day + "/" + year)
+//-->
+</script>
+</p>
+>>>>>>> 1899cb97f644e74a127167c383e7ddf960a7e629
             </div>
 
           </div>
@@ -1445,9 +1485,79 @@
           </div>
 
         </div>
+<<<<<<< HEAD
 
         <div class="banner-468x60">
           <a href="goliath-post-1.html"><img alt="" src="img/banner-468x60.png"></a>
+=======
+      </div>  
+    </header><!-- End header section --> 
+    <!-- start nav section --> 
+    <section id="navArea">
+      <!-- Start navbar -->
+      <nav class="navbar navbar-inverse" role="navigation">      
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>          
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav main_nav">
+            <li class="active"><a href="/"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+            <li><a href="#">Technology</a></li>            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Campus</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">news</a></li>
+                <li><a href="#">girls</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Write For Us</a></li>
+            <li><a href="#">Alumni Center</a></li>
+            <li><a href="contact.html">Kulikoni</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->      
+      </nav>
+    </section><!-- End nav section -->
+	
+    <section id="newsSection">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+           <!-- start news sticker -->
+          <div class="latest_newsarea">      
+            <span>Latest News</span>
+
+
+
+
+          {% if posts%}
+            <ul id="ticker01" class="news_sticker">
+{% for t in posts%}
+              <li><a href="#"><img src="img/{{ t.image }}" alt="">{{ t.title }}</a></li>
+{%endfor%}
+{%else%}
+<p> No Post </p>
+{%endif%}
+            </ul>
+            <div class="social_area">
+              <ul class="social_nav">
+                <li class="facebook"><a href="#"></a></li>
+                <li class="twitter"><a href="#"></a></li>
+                <li class="flickr"><a href="#"></a></li>
+                <li class="pinterest"><a href="#"></a></li>
+                <li class="googleplus"><a href="#"></a></li>
+                <li class="vimeo"><a href="#"></a></li>
+                <li class="youtube"><a href="#"></a></li>
+                <li class="mail"><a href="mailto:info@smartnews.com"></a></li>
+              </ul>
+            </div>      
+          </div><!-- End news sticker -->
+>>>>>>> 1899cb97f644e74a127167c383e7ddf960a7e629
         </div>
 
         <!-- Fitness -->
