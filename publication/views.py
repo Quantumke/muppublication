@@ -217,22 +217,23 @@ def reset_password(request):
 					  {'resetpass': resetpass}, context_instance=RequestContext(request))
 
 def viewpost(request):
+	trending = news_posts.objects.all().order_by('-posted_on')[:3]
+	latest_item=news_posts.objects.all().order_by('-posted_on')[:1]
+	campus_latest=news_posts.objects.filter(category='campus').order_by('-posted_on')[:1]
+	politics_latest=news_posts.objects.filter(category='politics').order_by('-posted_on')[:1]
+	kulikoni_latest=news_posts.objects.filter(category='kulikoni').order_by('-posted_on')[:1]
+	girls=news_posts.objects.filter(category='girls').order_by('-posted_on')[:1]
 	return render_to_response('official/index.html',{
-		'posts': news_posts.objects.all().order_by('-posted_on')[:20],
-		'slider':news_posts.objects.all().order_by('-posted_on')[:5],
-		'campus':news_posts.objects.all(),
-		'featured_news':news_posts.objects.filter(id=3),
-		'news':news_posts.objects.all(),
-		'Kulikoni':news_posts.objects.all().order_by('-posted_on')[:5],
-		'feature_politics':news_posts.objects.all().order_by('-id')[:1],
-		'politics':news_posts.objects.all()[:5],
-		'featured_girls':news_posts.objects.all().order_by('-id')[:1],
-		'girls':news_posts.objects.all()[:5],
-		'featured_popular':news_posts.objects.all().order_by('count', '-posted_on')[:1],
-		'popular':news_posts.objects.all().order_by('count')[:5],
-		'gallery':news_posts.objects.all()[:10],
+	'trending':trending,
+	'single_latest':latest_item,
+	'campus_latest':campus_latest,
+	'politics_latest':politics_latest,
+	'kulikoni_latest':kulikoni_latest,
+	'girls':girls,
 
 	})
+
+	
 
 def viewmore(request, slug):
 	data={}
