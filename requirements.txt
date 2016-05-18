@@ -4,12 +4,9 @@ gunicorn==19.4.5
 psycopg2==2.6.1
 whitenoise==2.0.6
 mongoengine
-<<<<<<< HEAD
 twilio==5.4.0
 httpagentparser==1.7.8
 django_tables2
-=======
 django_tables2
 httpagentparser
 twilio==5.4.0
->>>>>>> 1899cb97f644e74a127167c383e7ddf960a7e629
