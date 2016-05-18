@@ -13,8 +13,8 @@ class SavePost():
 		category=postdata.category
 		slug_data=slug.get('slug_data')
 		print(image)
-		#e = news_posts(title=title, body=body, category=category, slug=slug_data, posted_by='ben',image=image)
-		#e.save()
+		e = news_posts(title=title, body=body, category=category, slug=slug_data, posted_by='ben',image=image)
+		e.save()
 		data['postdata']=postdata
 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<title>Free CSS template by ChocoTemplates.com</title>
+	<title>New::Item</title>
     {% load staticfiles %}
 
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
@@ -68,7 +68,8 @@
 					</div>
 					<!-- End Box Head -->
 
-					<form action="" method="post">
+	<form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
 
 						<!-- Form -->
 						<div class="form">
