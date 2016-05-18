@@ -6,3 +6,4 @@ whitenoise==2.0.6
 mongoengine
 django_tables2
 httpagentparser
+twilio
